@@ -1,46 +1,93 @@
+:root {
+    --gray: #E2D8D8;
+    --black: #030303;
+    --whiteTrans: rgba(255,255,255,.79);
+    --white: #fefefe;
+    --lightgreen: #aaffaa;
+    --brown: rgba(160, 132, 96, 0.79);
+}
+
 html {
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../assets/4452317.jpg");
     background-size: cover;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h1 {
+    font-size: 5rem;
+    color: var(--black);
+    text-align: center;   
 }
 
-h1 {
-    font-size: 6rem;
-    color: rgb(226, 216, 216);
-    padding: 6rem;
+h2 {
+    font-size: 3rem;
+    color: var(--black);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: 1000;
 }
 
 p {
-    color: rgb(0, 0, 0);
+    color: var(--black);
     font-size: 1rem;
-    padding: 5rem;
+    padding: 1rem;
     font-weight: 1000;
-    background-color: rgba(255,255,255,.79);
-    border-radius: 25px;
 }
 
 a {
-    color:white;
+    color:var(--white);
 }
 
-#foot {
-    color: white;
-    position: absolute;
-    top: 95%;
+.container-outer {
+    padding: 2rem;
+    background-color: var(--brown);
+    border-radius: 25px;
+    margin-top: 3rem;
 }
 
-#nav {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.container-inner {
+    padding: 1rem;
+    background-color: var(--whiteTrans);
+    border-radius: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.grid-header {
+    grid-column: span 2;
+    padding-bottom: 1rem;
+}
+
+.item-name {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: .3rem;
+    padding-left: 1rem;
+}
+
+.item-listing {
+    font-size: 2rem;
+    padding-top: .3rem;
+    font-weight: 1000;
+}
+
+.item-description {
+    text-align: left;
+    font-style: italic;
+    font-weight: 550;
+    grid-column: span 2;
+    padding: 0 0 .3rem 1rem;
+}
+
+.centered {
+    text-align: center;
 }
 
 .tab {
@@ -49,5 +96,40 @@ a {
 }
 
 .current {
+    text-decoration: underline;
+    background-color: var(--lightgreen);
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#foot {
+    color: var(--white);
+}
+
+#nav {
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#content {
+    margin: 5rem auto 2rem;
+    padding: 2rem 5rem;
+    border-radius: 25px;
+    width: 50%;
+    background-color: var(--whiteTrans);
+}
+
+#customer {
+    padding: 0 0 1rem 3rem;
     text-decoration: underline;
 }
